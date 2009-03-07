@@ -8,7 +8,7 @@ require 'spec/expectations'
 stepsdir = File.expand_path(File.dirname __FILE__).gsub(/(.*step_definitions).*?/, '\1')
 $LOAD_PATH.unshift stepsdir unless $LOAD_PATH.include? stepsdir
 
-featuredir = File.expand_path(stepsdir).gsub(/(.*features).*?/, '\1')
+featuredir = File.expand_path File.join(stepsdir, '..')
 $LOAD_PATH.unshift featuredir unless $LOAD_PATH.include? featuredir
 
 libdir = File.expand_path File.join(featuredir, '..', 'lib')
@@ -17,21 +17,17 @@ $LOAD_PATH.unshift libdir unless $LOAD_PATH.include? libdir
 require 'akkordarbeit'
 
 Before do
-  @calc = Demo::Calculator.new
+  @parser = Akkordarbeit::Parser.new
 end
- 
-Given "I have entered $n into the calculator" do |n|
-  @calc.push n.to_i
+
+Given 'the song' do |song|
+  @song = song
 end
- 
-When /I press add/ do
-  @result = @calc.Add
+
+When 'I parse it' do
+  @result = @parser.parse @song
 end
- 
-Then /the result should be (.*) on the screen/ do |result|
-  @result.should == result.to_i
-end
- 
-Then /the result class should be (\w*)/ do |class_name|
-  @result.class.name.should == class_name
+
+Then 'the parsetree should be' do |parsetree|
+  @result.should == eval(parsetree)
 end
