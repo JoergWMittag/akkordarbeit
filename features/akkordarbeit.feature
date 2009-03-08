@@ -80,3 +80,25 @@ Feature: Parsing
     
     
     """
+
+  Scenario: Text Output of a simple Song with one Section and two lines
+    Given the parsetree
+    """
+    [
+     [
+      ["[D]", "Do what I say, ", "[Em]", "or I will suffer"],
+      ["Do what ", "[D]", "I say, ", "[Em]", "or I will suffer"]
+     ]
+    ]
+    """
+
+    When I format it
+    Then the output should be
+    """
+    [D]            [Em]
+    Do what I say, or I will suffer
+            [D]    [Em]
+    Do what I say, or I will suffer
+    
+    
+    """
