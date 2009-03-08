@@ -62,6 +62,12 @@ Feature: Parsing
     ]
     """
 
+Feature: Text Output
+  In order to view the chord files
+  As a user
+  I want to get a text output
+
+
   Scenario: Text Output of a simple Song
     Given the parsetree
     """
