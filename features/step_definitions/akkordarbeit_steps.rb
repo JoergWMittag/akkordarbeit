@@ -37,7 +37,7 @@ Before do
 end
 
 Given 'the parsetree' do |parsetree|
-  @parsetree = parsetree
+  @parsetree = eval(parsetree)
 end
 
 When 'I format it' do
