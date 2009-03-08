@@ -61,3 +61,21 @@ Feature: Parsing
     ]
     ]
     """
+
+  Scenario: Text Output of a simple Song
+    Given the parsetree
+    """
+    [
+     [
+      ["[D]", "Do what I say, ", "[Em]", "or I will suffer"]
+     ]
+    ]
+    """
+
+    When I format it
+    Then the output should be
+    """
+    [D]            [Em]
+    Do what I say, or I will suffer
+    
+    """

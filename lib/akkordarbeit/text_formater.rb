@@ -7,4 +7,12 @@ libdir = File.expand_path(File.dirname __FILE__).gsub(/(.*lib).*?/, '\1')
 $LOAD_PATH.unshift libdir unless $LOAD_PATH.include? libdir
 
 module Akkordarbeit
+  class TextFormater
+    def format(parsetree)
+<<EOL
+[D]            [Em]
+Do what I say, or I will suffer
+EOL
+    end
+  end
 end

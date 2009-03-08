@@ -31,3 +31,19 @@ end
 Then 'the parsetree should be' do |parsetree|
   @result.should == eval(parsetree)
 end
+
+Before do
+  @text_formater = Akkordarbeit::TextFormater.new
+end
+
+Given 'the parsetree' do |parsetree|
+  @parsetree = parsetree
+end
+
+When 'I format it' do
+  @result = @text_formater.format @parsetree
+end
+
+Then 'the output should be' do |output|
+  @result.should == output
+end
