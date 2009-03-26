@@ -1,0 +1,38 @@
+= Abstract
+
+Akkordarbeit[https://JoergWMittag.GitHub.Com/akkordarbeit/] is a 
+program for formatting simple leadsheets in a simplified ChordPro 
+format to various other formats such as HTML or plaintext.
+
+---
+
+= What
+
+This program converts leadsheets and songsheets written in a 
+subset of the widely used 
+ChordPro[http://Vromans.Org/johan/projects/Chordii/chordpro/] 
+file format into other formats, more suitable for printing or 
+publishing. Currently, the supported formats are plaintext and 
+HTML.
+
+Akkordarbeit only supports a very small subset of the ChordPro 
+format. Specifically, it only supports song lines, no directives.
+
+= Installation
+
+	gem install JoergWMittag-akkordarbeit
+
+= Usage
+
+	akkordarbeit -f html -i input.cho -o output.html
+
+= Acknowledgements
+
+Akkordarbeit would not be possible without the original Chord 
+utility.
+
+= License
+
+Akkordarbeit is licensed under the {MIT X11 License}[https://GitHub.Com/JoergWMittag/Akkordarbeit/blob/master/LICENSE.rdoc].
+
+:include: LICENSE.rdoc

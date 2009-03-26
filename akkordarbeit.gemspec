@@ -1,47 +1,85 @@
-#!/usr/bin/env ruby
-# vim: filetype=ruby, fileencoding=UTF-8, tabsize=2, shiftwidth=2
+# vim: fileencoding=UTF-8 ft=ruby syn=ruby ts=2 sw=2 ai eol et si
 
-#Copyright (c) 2009 Jörg W Mittag <JoergWMittag+Akkordarbeit@GoogleMail.Com>
-#This code is licensed under the terms of the MIT License (see LICENSE.txt)
+# Copyright (c) 2009 Jörg W Mittag <mailto:JoergWMittag+Akkordarbeit@GoogleMail.Com>
+# Copyright (c) 2009 Marc Rummel <mailto:Marc.Rummel+Akkordarbeit@GoogleMail.Com>
+# This code is licensed under the terms of the MIT License (see LICENSE.rdoc)
 
-filelist = %w[
-  akkordarbeit.gemspec
-  bin/akkordarbeit
-  lib/akkordarbeit.rb
-  lib/akkordarbeit/akkordarbeit.rb
-  LICENSE.txt
-  Rakefile.rb
-  README.rst
-  spec/and_spec.rb
-  spec/b001e_suite.rb
-  spec/if_spec.rb
-  spec/LICENSE.txt
-  spec/not_spec.rb
-  spec/or_spec.rb
-  spec/spec_helper.rb
-  spec/unless_spec.rb
-  tasks/gem_task.rb
-  tasks/spec_task.rb
-  tasks/_default_task.rb
-]
-
-speclist = filelist.grep /^spec/
-
-$spec = Gem::Specification.new do |s|
-  s.name = 'akkordarbeit'
-  s.summary = 'Message-sending based re-implementation of the Boolean operators.'
-  s.version = Gem::Version.new '0.0.0'
-  s.author = 'Jörg W Mittag'
-  s.email = 'JoergWMittag+Akkordarbeit@GoogleMail.Com'
-  s.homepage = 'https://JoergWMittag.GitHub.Com/akkordarbeit/'
-  s.rubyforge_project = 'Akkordarbeit'
-  s.required_ruby_version = Gem::Requirement.new '~> 1.8.6'
-  s.files = filelist
-  s.test_files = speclist
-  s.description = <<-'HERE'
-Akkordarbeit is a message-sending based re-implementation of the
-Boolean operators 'if', 'unless', 'and', 'or' and 'not' in
-pure Ruby. Lazy Evaluation / Short-circuiting is achieved
-through the use of blocks and lambda expressions.
+module Akkordarbeit
+  module Projectinfo
+    NAME     = 'Akkordarbeit'
+    VERSION  = '0.0.0'
+    SUMMARY  = 'Formats ChordPro leadsheets as HTML or plaintext'
+    AUTHORS  = ['Jörg W Mittag', 'Marc Rummel']
+    EMAIL    = 'JoergWMittag+Akkordarbeit@GoogleMail.Com'
+    HOMEPAGE = 'https://JoergWMittag.GitHub.Com/akkordarbeit/'
+    DESCRIPTION = <<-'HERE'
+Akkordarbeit is a program for formatting simple leadsheets in a
+simplified ChordPro format to various other formats such as HTML
+or plaintext.
   HERE
-end
+
+    FEATUREDIR = 'features'
+    FEATURES = %w[
+      akkordarbeit.feature
+      step_definitions/akkordarbeit_steps.rb
+    ]
+    FEATUREFILES = FEATURES.map { |f| File.join FEATUREDIR, f }
+
+    SPECDIR = 'spec'
+    SPECS = %w[
+      akkordarbeit_spec.rb
+      akkordarbeit_suite.rb
+      spec_helper.rb
+    ]
+    SPECFILES = SPECS.map { |f| File.join SPECDIR, f }
+
+    TESTFILES = FEATUREFILES + SPECFILES
+
+    DOCFILES = %w[
+      LICENSE.rdoc
+      README.rdoc
+    ]
+
+    SOURCEDIR = 'lib'
+    SOURCES = %w[
+      akkordarbeit.rb
+      akkordarbeit/parser.rb
+      akkordarbeit/text_formatter.rb
+    ]
+    SOURCEFILES = SOURCES.map { |f| File.join SOURCEDIR, f }
+
+    EXECUTABLEDIR = 'bin'
+    EXECUTABLES = %w[
+      akkordarbeit
+    ]
+    EXECUTABLEFILES = EXECUTABLES.map { |f| File.join EXECUTABLEDIR, f }
+
+    RDOCFILES = DOCFILES + EXECUTABLEFILES + SOURCEFILES
+    RDOCOPTIONS = %w[--all --charset=UTF-8 --line-numbers --webcvs=https://GitHub.Com/JoergWMittag/Akkordarbeit/blob/master/%s]
+
+    FILELIST = TESTFILES + RDOCFILES
+
+    GEMSPEC = Gem::Specification.new do |s|
+      s.name = NAME.downcase
+      s.summary = SUMMARY
+      s.version = Gem::Version.new VERSION
+      s.authors = AUTHORS
+      s.email = EMAIL
+      s.homepage = HOMEPAGE
+      s.rubyforge_project = NAME
+      s.required_ruby_version = Gem::Requirement.new '~> 1.8.6'
+      s.has_rdoc = true
+      s.rdoc_options = RDOCOPTIONS
+      s.extra_rdoc_files = DOCFILES
+      s.files = FILELIST
+      s.test_files = TESTFILES
+      s.executables = EXECUTABLES
+      s.description = DESCRIPTION
+      s.add_runtime_dependency 'tagz', '~> 5.0.1'
+      s.add_development_dependency 'cucumber', '~> 0.2.2'
+      s.add_development_dependency 'jscruggs-metric_fu', '~> 0.9.0'
+      s.add_development_dependency 'mislav-hanna', '~> 0.1.7'
+      s.add_development_dependency 'rspec', '~> 1.2.2'
+    end
+  end
+end unless defined? Akkordarbeit::Projectinfo::GEMSPEC
