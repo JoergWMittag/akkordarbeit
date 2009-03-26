@@ -32,14 +32,20 @@ end
 
 Before do
   @text_formatter = Akkordarbeit::TextFormatter.new
+  @html_formatter = Akkordarbeit::HtmlFormatter.new
 end
 
 Given 'the parsetree' do |parsetree|
   @parsetree = eval(parsetree)
 end
 
-When 'I format it' do
-  @result = @text_formatter.format @parsetree
+When 'I format it as (.*)' do |format|
+  @result = case format
+  when /html/i
+    @html_formatter.format @parsetree
+  when /text/i
+    @text_formatter.format @parsetree
+  end
 end
 
 Then 'the output should be' do |output|

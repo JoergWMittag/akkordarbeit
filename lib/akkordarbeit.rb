@@ -9,3 +9,4 @@ $LOAD_PATH.unshift libdir unless $LOAD_PATH.include? libdir
 
 require 'akkordarbeit/parser'
 require 'akkordarbeit/text_formatter'
+require 'akkordarbeit/html_formatter'

@@ -20,6 +20,7 @@ or plaintext.
 
     FEATUREDIR = 'features'
     FEATURES = %w[
+      html_formatter.feature
       parser.feature
       text_formatter.feature
       step_definitions/akkordarbeit_steps.rb
@@ -44,6 +45,7 @@ or plaintext.
     SOURCEDIR = 'lib'
     SOURCES = %w[
       akkordarbeit.rb
+      akkordarbeit/html_formatter.rb
       akkordarbeit/parser.rb
       akkordarbeit/text_formatter.rb
     ]

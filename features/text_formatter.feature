@@ -13,7 +13,7 @@ Feature: Text Output
     ]
     """
 
-    When I format it
+    When I format it as text
     Then the output should be
     """
     [D]            [Em]
@@ -33,7 +33,7 @@ Feature: Text Output
     ]
     """
 
-    When I format it
+    When I format it as text
     Then the output should be
     """
     [D]            [Em]
@@ -59,7 +59,7 @@ Feature: Text Output
     ]
     """
 
-    When I format it
+    When I format it as text
     Then the output should be
     """
     [D]            [Em]
