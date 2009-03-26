@@ -20,7 +20,8 @@ or plaintext.
 
     FEATUREDIR = 'features'
     FEATURES = %w[
-      akkordarbeit.feature
+      parser.feature
+      text_formatter.feature
       step_definitions/akkordarbeit_steps.rb
     ]
     FEATUREFILES = FEATURES.map { |f| File.join FEATUREDIR, f }
