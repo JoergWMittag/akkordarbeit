@@ -8,4 +8,4 @@ libdir = File.expand_path(File.dirname __FILE__).gsub(/(.*lib).*?/, '\1')
 $LOAD_PATH.unshift libdir unless $LOAD_PATH.include? libdir
 
 require 'akkordarbeit/parser'
-require 'akkordarbeit/text_formater'
+require 'akkordarbeit/text_formatter'

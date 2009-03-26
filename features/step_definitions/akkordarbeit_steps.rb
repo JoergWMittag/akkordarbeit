@@ -34,7 +34,7 @@ Then 'the parsetree should be' do |parsetree|
 end
 
 Before do
-  @text_formater = Akkordarbeit::TextFormater.new
+  @text_formatter = Akkordarbeit::TextFormatter.new
 end
 
 Given 'the parsetree' do |parsetree|
@@ -42,7 +42,7 @@ Given 'the parsetree' do |parsetree|
 end
 
 When 'I format it' do
-  @result = @text_formater.format @parsetree
+  @result = @text_formatter.format @parsetree
 end
 
 Then 'the output should be' do |output|

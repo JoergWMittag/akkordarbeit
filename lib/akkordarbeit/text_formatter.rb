@@ -8,7 +8,7 @@ $LOAD_PATH.unshift libdir unless $LOAD_PATH.include? libdir
 
 module Akkordarbeit
 
-  class TextFormater
+  class TextFormatter
 
     def format(parsetree)
       output = ""
