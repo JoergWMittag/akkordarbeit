@@ -20,7 +20,7 @@ module Akkordarbeit
         end
         song << section
       end
-      song
+      return song
     end
   end
 end

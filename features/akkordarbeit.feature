@@ -2,7 +2,7 @@ Feature: Parsing
   In order to seperate backend and frontend
   As a backend writer
   I want to get a parsetree
- 
+
   Scenario: Simple Song
     Given the song
     """
@@ -14,7 +14,7 @@ Feature: Parsing
     """
     [
       [
-        ["[D]", "Do what I say, ", "[Em]", "or I will suffer"]
+        ['[D]', 'Do what I say, ', '[Em]', 'or I will suffer']
       ]
     ]
     """
@@ -31,8 +31,8 @@ Feature: Parsing
     """
     [
       [
-        ["[D]", "Do what I say, ", "[Em]", "or I will suffer"],
-        ["[D]", "Do what I say, ", "[Em]", "or I will suffer"]
+        ['[D]', 'Do what I say, ', '[Em]', 'or I will suffer'],
+        ['[D]', 'Do what I say, ', '[Em]', 'or I will suffer']
       ]
     ]
     """
@@ -51,14 +51,14 @@ Feature: Parsing
     Then the parsetree should be
     """
     [
-    [
-      ["[D]", "Do what I say, ", "[Em]", "or I will suffer"],
-      ["[D]", "Do what I say, ", "[Em]", "or I will suffer"]
-    ],
-    [
-      ["[D]", "Do what I say, ", "[Em]", "or I will suffer"],
-      ["[D]", "Do what I say, ", "[Em]", "or I will suffer"]
-    ]
+      [
+        ['[D]', 'Do what I say, ', '[Em]', 'or I will suffer'],
+        ['[D]', 'Do what I say, ', '[Em]', 'or I will suffer']
+      ],
+      [
+        ['[D]', 'Do what I say, ', '[Em]', 'or I will suffer'],
+        ['[D]', 'Do what I say, ', '[Em]', 'or I will suffer']
+      ]
     ]
     """
 
@@ -72,9 +72,9 @@ Feature: Text Output
     Given the parsetree
     """
     [
-     [
-      ["[D]", "Do what I say, ", "[Em]", "or I will suffer"]
-     ]
+      [
+        ['[D]', 'Do what I say, ', '[Em]', 'or I will suffer']
+      ]
     ]
     """
 
@@ -83,18 +83,18 @@ Feature: Text Output
     """
     [D]            [Em]
     Do what I say, or I will suffer
-    
-    
+
+
     """
 
   Scenario: Text Output of a simple Song with one Section and two lines
     Given the parsetree
     """
     [
-     [
-      ["[D]", "Do what I say, ", "[Em]", "or I will suffer"],
-      ["Do what ", "[D]", "I say, ", "[Em]", "or I will suffer"]
-     ]
+      [
+        ['[D]', 'Do what I say, ', '[Em]', 'or I will suffer'],
+        ['Do what ', '[D]', 'I say, ', '[Em]', 'or I will suffer']
+      ]
     ]
     """
 
@@ -105,22 +105,22 @@ Feature: Text Output
     Do what I say, or I will suffer
             [D]    [Em]
     Do what I say, or I will suffer
-    
-    
+
+
     """
 
   Scenario: Text Output of a simple Song with two Section and two lines
     Given the parsetree
     """
     [
-     [
-      ["[D]", "Do what I say, ", "[Em]", "or I will suffer"],
-      ["Do what ", "[D]", "I say, ", "[Em]", "or I will suffer"]
-     ],
-     [
-      ["[D]", "Do what I say, ", "[Em]", "or I will suffer"],
-      ["Do what ", "[D]", "I say, ", "[Em]", "or I will suffer"]
-     ]
+      [
+        ['[D]', 'Do what I say, ', '[Em]', 'or I will suffer'],
+        ['Do what ', '[D]', 'I say, ', '[Em]', 'or I will suffer']
+      ],
+      [
+        ['[D]', 'Do what I say, ', '[Em]', 'or I will suffer'],
+        ['Do what ', '[D]', 'I say, ', '[Em]', 'or I will suffer']
+      ]
     ]
     """
 
@@ -131,7 +131,7 @@ Feature: Text Output
     Do what I say, or I will suffer
             [D]    [Em]
     Do what I say, or I will suffer
-    
+
     [D]            [Em]
     Do what I say, or I will suffer
             [D]    [Em]

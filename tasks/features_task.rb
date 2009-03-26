@@ -14,6 +14,6 @@ $LOAD_PATH.unshift featuredir unless $LOAD_PATH.include? featuredir
 basedir = File.expand_path File.join(featuredir, '..')
 $LOAD_PATH.unshift basedir unless $LOAD_PATH.include? basedir
 
-Cucumber::Rake::Task.new(:features) do |t|
-  t.cucumber_opts = "--format pretty"
+Cucumber::Rake::Task.new :features do |t|
+  t.cucumber_opts = '--format pretty'
 end

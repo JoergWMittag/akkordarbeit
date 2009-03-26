@@ -7,14 +7,12 @@ libdir = File.expand_path(File.dirname __FILE__).gsub(/(.*lib).*?/, '\1')
 $LOAD_PATH.unshift libdir unless $LOAD_PATH.include? libdir
 
 module Akkordarbeit
-
   class TextFormatter
-
     def format(parsetree)
-      output = ""
+      output = ''
       parsetree.each do |section|
         section.each do |line|
-          chords, lyrics = "", ""
+          chords, lyrics = '', ''
           line.each do |token|
             regex = /(\[.*?\])/
             if regex.match(token)
@@ -28,9 +26,7 @@ module Akkordarbeit
         end
         output << "\n"
       end
-      output
+      return output
     end
-
   end
-
 end
