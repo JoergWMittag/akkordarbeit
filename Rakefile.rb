@@ -6,7 +6,6 @@
 
 require 'rake'
 
-taskdir = File.expand_path File.join(File.dirname(__FILE__), 'tasks')
-$LOAD_PATH.unshift taskdir unless $LOAD_PATH.include? taskdir
+taskdir = File.join File.dirname(File.expand_path __FILE__), 'tasks'
 
 FileList[File.join taskdir, '**', '*_task.rb'].each do |task| load task end

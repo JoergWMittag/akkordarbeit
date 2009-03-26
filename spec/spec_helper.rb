@@ -4,8 +4,6 @@
 # Copyright (c) 2009 Marc Rummel <mailto:Marc.Rummel+Akkordarbeit@GoogleMail.Com>
 # This code is licensed under the terms of the MIT License (see LICENSE.rdoc)
 
-begin require 'rubygems'; rescue LoadError
-else begin gem 'rspec', '~> 1.1.11'; rescue Gem::LoadError; end end
 require 'spec'
 
 libdir = File.expand_path File.join(File.dirname(__FILE__), 'lib').gsub(/(.*)spec.*?/, '\1')
