@@ -78,6 +78,7 @@ or plaintext.
       s.test_files = TESTFILES
       s.executables = EXECUTABLES
       s.description = DESCRIPTION
+      s.add_runtime_dependency 'tagz', '~> 5.0.1'
       s.add_development_dependency 'cucumber', '~> 0.2.2'
       s.add_development_dependency 'jscruggs-metric_fu', '~> 0.9.0'
       s.add_development_dependency 'mislav-hanna', '~> 0.1.7'
