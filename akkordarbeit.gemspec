@@ -6,7 +6,7 @@
 
 module Akkordarbeit
   module Projectinfo
-    NAME     = 'Akkordarbeit'
+    NAME     = 'Akkordarbeit-Tagz'
     VERSION  = '0.0.2'
     SUMMARY  = 'Formats ChordPro leadsheets as HTML or plaintext'
     AUTHORS  = ['Jörg W Mittag', 'Marc Rummel']
