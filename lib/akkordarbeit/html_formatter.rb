@@ -15,9 +15,9 @@ module Akkordarbeit
       #tagz << '<!DOCTYPE>'
       html_(:xmlns => 'http://www.w3.org/1999/xhtml', 'xml:lang' => :en, :lang => :en) {
         head_ {
-          meta_ 'http-equiv' => 'Content-type', :content => 'text/html; charset=UTF-8'
+          meta_! 'http-equiv' => 'Content-type', :content => 'text/html; charset=UTF-8'
           title_ { 'Song-Sheet' }
-          meta_ 'http-equiv' => 'content-language', :content => :en
+          meta_! 'http-equiv' => 'content-language', :content => :en
           style_ { 'p {
 	line-height: 300%;
 	max-width: 30em;
@@ -66,7 +66,7 @@ module Akkordarbeit
                       end
                     end
                   end
-                  br_
+                  br_!
                 end
               }
             end
