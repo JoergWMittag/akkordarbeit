@@ -10,6 +10,7 @@ require 'tagz'
 
 module Akkordarbeit
   class HtmlFormatter
+    NO_BREAKING_SPACE = ' '
     include Tagz.globally
     def format(parsetree)
       #tagz << '<!DOCTYPE>'
@@ -53,7 +54,7 @@ module Akkordarbeit
                       unless last_chord
                         tagz << token
                       else
-                        token = ' ' if token =~ /^\s$/
+                        token = NO_BREAKING_SPACE if token =~ /^\s$/
                         span_(:class => :chord) {
                           span_ {
                             span_(:class => :brackets) { '[' }
