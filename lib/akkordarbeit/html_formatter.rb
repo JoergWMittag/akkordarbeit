@@ -38,10 +38,10 @@ module Akkordarbeit
           }
         }
         body_ {
-          header_ {
+          div_ {
             h1_ { 'Song-Sheet' }
           }
-          section_ {
+          div_ {
             parsetree.each do |section|
               p_ {
                 section.each do |line|

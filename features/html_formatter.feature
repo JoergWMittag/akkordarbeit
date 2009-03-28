@@ -31,7 +31,7 @@ Feature: HTML Output
     }
     .chord .brackets {
     	display: none;
-    }</style></head><body><header><h1>Song-Sheet</h1></header><section><p><span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>Do what I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/></p></section></body></html>
+    }</style></head><body><div><h1>Song-Sheet</h1></div><div><p><span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>Do what I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/></p></div></body></html>
     """
 
   Scenario: HTML Output of a simple Song with one Section and two lines
@@ -63,7 +63,7 @@ Feature: HTML Output
     }
     .chord .brackets {
     	display: none;
-    }</style></head><body><header><h1>Song-Sheet</h1></header><section><p><span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>Do what I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/>Do what <span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/></p></section></body></html>
+    }</style></head><body><div><h1>Song-Sheet</h1></div><div><p><span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>Do what I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/>Do what <span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/></p></div></body></html>
     """
 
   Scenario: HTML Output of a simple Song with two Section and two lines
@@ -99,5 +99,5 @@ Feature: HTML Output
     }
     .chord .brackets {
     	display: none;
-    }</style></head><body><header><h1>Song-Sheet</h1></header><section><p><span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>Do what I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/>Do what <span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/></p><p><span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>Do what I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/>Do what <span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/></p></section></body></html>
+    }</style></head><body><div><h1>Song-Sheet</h1></div><div><p><span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>Do what I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/>Do what <span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/></p><p><span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>Do what I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/>Do what <span class="chord"><span><span class="brackets">[</span>D<span class="brackets">]</span></span>I say, </span><span class="chord"><span><span class="brackets">[</span>Em<span class="brackets">]</span></span>or I will suffer</span><br/></p></div></body></html>
     """
