@@ -18,6 +18,8 @@ simplified ChordPro format to various other formats such as HTML
 or plaintext.
   HERE
 
+    LICENSE = 'MIT X11 License (see LICENSE.rdoc)'
+
     FEATUREDIR = 'features'
     FEATURES = %w[
       html_formatter.feature
@@ -70,8 +72,9 @@ or plaintext.
       s.email = EMAIL
       s.homepage = HOMEPAGE
       s.rubyforge_project = NAME
-      s.required_ruby_version = Gem::Requirement.new '~> 1.8.6'
-      s.required_rubygems_version = Gem::Requirement.new '~> 1.3.1'
+      s.license = LICENSE
+      s.required_ruby_version = Gem::Version.new '1.8.6'
+      s.required_rubygems_version = Gem::Version.new '1.3.2'
       s.has_rdoc = true
       s.rdoc_options = RDOCOPTIONS
       s.extra_rdoc_files = DOCFILES

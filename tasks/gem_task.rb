@@ -4,8 +4,7 @@
 # Copyright (c) 2009 Marc Rummel <mailto:Marc.Rummel+Akkordarbeit@GoogleMail.Com>
 # This code is licensed under the terms of the MIT License (see LICENSE.rdoc)
 
-require 'rake'
-require 'rake/gempackagetask'
+require 'rubygems/package_task'
 
 taskdir = File.expand_path(File.dirname __FILE__).gsub(/(.*tasks).*?/, '\1')
 basedir = File.expand_path File.join(taskdir, '..')
@@ -13,7 +12,7 @@ $LOAD_PATH.unshift basedir unless $LOAD_PATH.include? basedir
 
 load 'akkordarbeit.gemspec'
 
-Rake::GemPackageTask.new Akkordarbeit::Projectinfo::GEMSPEC do |pkg|
+Gem::PackageTask.new Akkordarbeit::Projectinfo::GEMSPEC do |pkg|
   pkg.need_tar     = true
   pkg.need_tar_gz  = true
   pkg.need_tar_bz2 = true
