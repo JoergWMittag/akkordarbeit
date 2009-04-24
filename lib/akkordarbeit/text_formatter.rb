@@ -19,7 +19,7 @@ module Akkordarbeit
               chords << token
             else
               lyrics << token
-              chords << " " * (lyrics.length - chords.length)
+              chords << ' ' * (lyrics.length - chords.length)
             end
           end
           output << chords.rstrip << "\n" << lyrics.rstrip << "\n"
