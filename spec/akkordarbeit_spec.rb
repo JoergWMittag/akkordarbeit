@@ -9,6 +9,6 @@ require File.expand_path File.join(File.dirname(__FILE__), 'spec_helper')
 require 'akkordarbeit'
 
 describe Akkordarbeit do
-  it do
+  it 'should work' do
   end
 end

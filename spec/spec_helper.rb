@@ -5,6 +5,7 @@
 # This code is licensed under the terms of the MIT License (see LICENSE.rdoc)
 
 require 'spec'
+require 'spec/autorun'
 
 libdir = File.expand_path File.join(File.dirname(__FILE__), 'lib').gsub(/(.*)spec.*?/, '\1')
 $LOAD_PATH.unshift libdir unless $LOAD_PATH.include? libdir

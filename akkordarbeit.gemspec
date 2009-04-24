@@ -34,6 +34,7 @@ or plaintext.
       akkordarbeit_spec.rb
       akkordarbeit_suite.rb
       spec_helper.rb
+      spec.opts
     ]
     SPECFILES = SPECS.map { |f| File.join SPECDIR, f }
 
@@ -85,7 +86,7 @@ or plaintext.
       s.add_development_dependency 'cucumber', '~> 0.3.0'
       s.add_development_dependency 'jscruggs-metric_fu', '~> 0.9.0'
       s.add_development_dependency 'rdoc', '~> 2.4.3', '>= 2.4.2'
-      s.add_development_dependency 'rspec', '~> 1.2.2'
+      s.add_development_dependency 'rspec', '~> 1.2.4', '>= 1.2.4'
     end
   end
 end unless defined? Akkordarbeit::Projectinfo::GEMSPEC
