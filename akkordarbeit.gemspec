@@ -43,6 +43,7 @@ or plaintext.
     DOCFILES = %w[
       LICENSE.rdoc
       README.rdoc
+      examples/README.rdoc
     ]
 
     SOURCEDIR = 'lib'

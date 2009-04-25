@@ -1,0 +1,59 @@
+= Examples
+
+This directory contains example files in several formats, each 
+describing the same song.
+
+---
+
+= {ChordPro (+.cho+)}[http://Vromans.Org/johan/projects/Chordii/chordpro/]
+
+ChordPro is *the* file format for leadsheets. It all started with 
+a Unix utility called +chord+, which set the basis for many 
+clones, derivatives, extensions and successors. Unfortunately, 
+the format was never formally specified, and so each 
+implementation interpreted it in its own way, added incompatible 
+extensions and generally made a mess of the format that wasn't 
+actually that good to begin with.
+
+To see it in action, try:
+
+	chordii -o message.ps message.cho
+
+= {GuitarTeX (+.gtx+)}[http://GuitarTeX.SourceForge.Net/]
+
+GuitarTeX is one of those programs that expand upon the original 
+ChordPro format. It is a frontend to TeX, LaTeX, MusiXTeX and a 
+couple of other TeX-y things. Its file format is a chimera of a 
+greatly expanded ChordPro superset and LaTeX. The implementation 
+is a very hacky Perl script that uses Regexps to convert the 
+input into equally hacky LaTeX.
+
+To see it in action, try:
+
+	gtx2tex message.gtx
+
+= {reStructuredText (+.rst+)}[http://DocUtils.SourceForge.Net/rst.html]
+
+ReStructuredText is the lightweight markup of the Python-docutils 
+project. It is intended to be a documentation language for Python 
+sourcecode, and therefore not very friendly to being (ab)used as 
+a leadsheet markup language. However, it actually works rather 
+well. This is the format that I use to write my leadsheets in. 
+(Until Akkordarbeit is finished, of course.) I use 
+Python-docutils to convert it to HTML, then a Regexp to mark up 
+the chord symbols with nice HTML and lastly a Ruby script using 
+Hpricot to clean up the generated HTML.
+
+To see it in action, try:
+
+	rst2html -l de message.rst message.html
+
+= {Akkordarbeit (+.akk+)}[https://JoergWMittag.GitHub.Com/akkordarbeit/]
+
+This is the holy grail, of course. This file contains just a few 
+ideas for some syntactic features of Akkordarbeit. It is meant 
+purely as a basis for discussion.
+
+To see it in action, try:
+
+	akkordarbeit -f html -i message.akk -o message.html

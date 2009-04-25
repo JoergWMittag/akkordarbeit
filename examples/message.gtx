@@ -1,0 +1,140 @@
+{musixtex}
+{document_class:scrartcl}
+
+{title:Mess Age}
+{subtitle:Neon Karma}
+
+{define:E base-fret t frets n p2 p2 p1 n n}
+{define:c#m base-fret 4 frets x n p2 p2 p1 x}
+{define:c#m7 base-fret 4 frets x n p2 n p1 x}
+{define:H/C# base-fret 4 frets x n n n n x}
+{define:A base-fret 5 frets n p2 p2 p1 x x}
+{define:g#m base-fret 4 frets n p2 p2 n x x}
+{define:g#m base-fret 4 frets n p2 p2 n n n}
+{define:H base-fret 7 frets n p2 p2 p1 x x}
+{define:H7 base-fret 7 frets n p2 n p1 x x}
+{define:em base-fret t frets n p2 p2 n n n}
+{define:emadd4 base-fret t frets n p2 p2 p2 n n}
+
+\notes\metron{\qu}{139}\en
+
+{comment:Intro = Kicks}
+
+{start_of_instr}
+[E]
+[E]
+[E] [E]
+[E][E] [E][E]
+{end_of_instr}
+
+{comment:Verse 1}
+
+[c#m] Agent Orange, [c#m] undercover
+[c#m^7] Abu Ghraib, [c#m^7] need a lover?
+[c#m] Little Boy, Fat [c#m]Man
+such [c#m^7]innocent names, [H/C#] but damn
+
+{comment:Pre-Chorus 1}
+
+{start_of_bridge}
+[A] [g#m]
+{end_of_bridge}
+
+{comment:Verse 2}
+
+[c#m]Holy Trinity, [c#m]glorified gun
+[c#m^7]twenty and one [c#m^7]kiloton.
+[c#m]bodies in bags, hymns [c#m]for the dead
+and we are [c#m^7]moving ahead just [H/C#]like they said
+
+{comment:Pre-Chorus 2}
+
+{start_of_bridge}
+{margin:STOP}
+[A] [g#m]
+{end_of_bridge}
+
+{comment:Chorus 1}
+
+{start_of_chorus}
+[E] Secret prayers, [g#m]kept in vain
+[H] [H]
+{second:     The green screens -- point and}
+[E] Secret prayers, [g#m]kept in vain
+{second:click}
+[H] [H]
+{second:     The mean dreams come and}
+[H^7]stick [H^7]
+{end_of_chorus}
+
+{comment:Verse 3}
+
+[c#m] Agent Blue, [c#m] under fire
+[c#m^7] playgrounds fenced [c#m^7] in barbed wire
+[c#m]fields of life [c#m]sprayed with death
+[c#m^7]just another move in that [H/C#]game of chess
+
+{comment:Pre-Chorus 3}
+
+{start_of_bridge}
+{margin:STOP}
+[A] [g#m]
+{end_of_bridge}
+
+{comment:Chorus 2}
+
+{start_of_chorus}
+[E] Secret prayers, [g#m]kept in vain
+[H] [H]
+{second:The green screens -- point and}
+
+[E] Secret prayers, [g#m]kept in vain
+{second:click}
+
+[H] [H]
+{second:The mean dreams come and}
+
+[H^7]stick [H^7]
+{end_of_chorus}
+
+{comment:Solo}
+
+{start_of_instr}
+[em] [em^add4]
+[E] [E]
+[em] [em^add4]
+[E] [E]
+[em] [em^add4]
+[g#m] [A]
+[H] [H]
+[H^7] [H^7]
+{end_of_instr}
+{comment:Verse 4}
+
+[c#m] Agent White, [c#m]no investigation
+[c#m^7] c'mon let's in[c#m^7]vade another nation
+[c#m] obey and sup[c#m]port The Man
+[c#m^7]oh, how I wish I could be [H/C#]Peter Pan
+{comment:Pre-Chorus 4}
+
+{start_of_bridge}
+{margin:STOP}
+[A] [g#m]
+{end_of_bridge}
+
+{comment:Chorus 3 = 1,5 * Chorus}
+
+{start_of_chorus}
+[E] Secret prayers, [g#m]kept in vain
+{second:[H] The [H]green screens -- point and}
+[E] Secret prayers, [g#m]kept in vain
+{second:click}
+{second:[H] The [H]mean dreams come and}
+[E] Secret prayers, [g#m]kept in vain
+{second:stick}
+{second:[H] Fucking [H]power poli-}
+[E] Secret prayers, [g#m]kept in vain
+{second:-tics}
+{second:[H] [H]All that makes me}
+{second:[E]sick!}
+{end_of_chorus}
