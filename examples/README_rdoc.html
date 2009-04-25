@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>File: README.rdoc [Akkordarbeit - Formats ChordPro leadsheets as HTML or plaintext]</title>
+
+	<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE_rdoc.html">LICENSE.rdoc</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="../examples/README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Akkordarbeit.html">Akkordarbeit</a></li>
+				
+					<li><a href="../Akkordarbeit/HtmlFormatter.html">Akkordarbeit::HtmlFormatter</a></li>
+				
+					<li><a href="../Akkordarbeit/Main.html">Akkordarbeit::Main</a></li>
+				
+					<li><a href="../Akkordarbeit/Parser.html">Akkordarbeit::Parser</a></li>
+				
+					<li><a href="../Akkordarbeit/TextFormatter.html">Akkordarbeit::TextFormatter</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1>Examples</h1>
+<p>
+This directory contains example files in several formats, each describing
+the same song.
+</p>
+<hr size="1"></hr><h1><a href="http://Vromans.Org/johan/projects/Chordii/chordpro/">ChordPro (.cho)</a></h1>
+<p>
+ChordPro is <b>the</b> file format for leadsheets. It all started with a
+Unix utility called <tt>chord</tt>, which set the basis for many clones,
+derivatives, extensions and successors. Unfortunately, the format was never
+formally specified, and so each implementation interpreted it in its own
+way, added incompatible extensions and generally made a mess of the format
+that wasn&#8217;t actually that good to begin with.
+</p>
+<p>
+To see it in action, try:
+</p>
+<pre>
+        chordii -o message.ps message.cho
+</pre>
+<h1><a href="http://GuitarTeX.SourceForge.Net/">GuitarTeX (.gtx)</a></h1>
+<p>
+GuitarTeX is one of those programs that expand upon the original ChordPro
+format. It is a frontend to TeX, LaTeX, MusiXTeX and a couple of other
+TeX-y things. Its file format is a chimera of a greatly expanded ChordPro
+superset and LaTeX. The implementation is a very hacky Perl script that
+uses Regexps to convert the input into equally hacky LaTeX.
+</p>
+<p>
+To see it in action, try:
+</p>
+<pre>
+        gtx2tex message.gtx
+</pre>
+<h1><a href="http://DocUtils.SourceForge.Net/rst.html">reStructuredText (.rst)</a></h1>
+<p>
+ReStructuredText is the lightweight markup of the Python-docutils project.
+It is intended to be a documentation language for Python sourcecode, and
+therefore not very friendly to being (ab)used as a leadsheet markup
+language. However, it actually works rather well. This is the format that I
+use to write my leadsheets in. (Until <a
+href="../Akkordarbeit.html">Akkordarbeit</a> is finished, of course.) I use
+Python-docutils to convert it to HTML, then a Regexp to mark up the chord
+symbols with nice HTML and lastly a Ruby script using Hpricot to clean up
+the generated HTML.
+</p>
+<p>
+To see it in action, try:
+</p>
+<pre>
+        rst2html -l de message.rst message.html
+</pre>
+<h1><a href="https://JoergWMittag.GitHub.Com/akkordarbeit/">Akkordarbeit (.akk)</a></h1>
+<p>
+This is the holy grail, of course. This file contains just a few ideas for
+some syntactic features of <a href="../Akkordarbeit.html">Akkordarbeit</a>.
+It is meant purely as a basis for discussion.
+</p>
+<p>
+To see it in action, try:
+</p>
+<pre>
+        akkordarbeit -f html -i message.akk -o message.html
+</pre>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+
