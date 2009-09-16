@@ -87,6 +87,8 @@ or plaintext.
       s.add_development_dependency 'cucumber', '~> 0.3.0'
       s.add_development_dependency 'jscruggs-metric_fu', '~> 1.1.5', '>= 1.1.5'
       s.add_development_dependency 'rdoc', '~> 2.4.3', '>= 2.4.2'
+      s.add_development_dependency 'reek', '~> 1.1.3', '>= 1.1.3'
+      s.add_development_dependency 'roodi', '~> 2.0.0', '>= 2.0.0'
       s.add_development_dependency 'rspec', '~> 1.2.4', '>= 1.2.4'
     end
   end
