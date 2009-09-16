@@ -85,7 +85,7 @@ or plaintext.
       s.executables = EXECUTABLES
       s.description = DESCRIPTION
       s.add_development_dependency 'cucumber', '~> 0.3.0'
-      s.add_development_dependency 'jscruggs-metric_fu', '~> 0.9.0'
+      s.add_development_dependency 'jscruggs-metric_fu', '~> 1.1.5', '>= 1.1.5'
       s.add_development_dependency 'rdoc', '~> 2.4.3', '>= 2.4.2'
       s.add_development_dependency 'rspec', '~> 1.2.4', '>= 1.2.4'
     end
