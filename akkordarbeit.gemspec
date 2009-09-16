@@ -7,7 +7,7 @@
 module Akkordarbeit
   module Projectinfo
     NAME     = 'Akkordarbeit'
-    VERSION  = '0.0.3a'
+    VERSION  = '0.0.3b'
     SUMMARY  = 'Formats ChordPro leadsheets as HTML or plaintext'
     AUTHORS  = ['Jörg W Mittag', 'Marc Rummel']
     EMAIL    = 'JoergWMittag+Akkordarbeit@GoogleMail.Com'
