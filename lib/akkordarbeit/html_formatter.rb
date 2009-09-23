@@ -10,13 +10,13 @@ require 'cgi'
 
 module Akkordarbeit
   class HtmlFormatter
-    def format(parsetree)
-      output =  <<-'HERE'
+    def format(parsetree, title = 'Song-Sheet')
+      output =  <<-"HERE"
 <!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
 	<head>
 		<meta http-equiv='Content-type'     content='text/html; charset=UTF-8' />
-		<title>Song-Sheet</title>
+		<title>#{escape(title)}</title>
 		<meta http-equiv='content-language' content='en' />
 		<style>
 			p {
@@ -39,7 +39,7 @@ module Akkordarbeit
 	</head>
 	<body>
 		<header>
-			<h1>Song-Sheet</h1>
+			<h1>#{escape(title)}</h1>
 		</header>
 		<section>
       HERE
@@ -64,6 +64,7 @@ module Akkordarbeit
           end
           output << "<br />\n"
         end
+        output.gsub! %r|<br />\Z|, ''
         output << "\t"*3 << "</p>\n"
       end
       return output << <<-'HERE'

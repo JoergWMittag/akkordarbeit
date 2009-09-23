@@ -17,9 +17,12 @@ module Akkordarbeit
       @args = args
       @options = { :format => 'HTML', :input => $stdin, :output => $stdout }
       @option_parser = OptionParser.new do |opts|
-        opts.banner = 'Usage: akkordarbeit -f <FORMAT> -i <INPUT> -o <OUTPUT>'
+        opts.banner = 'Usage: akkordarbeit -f <FORMAT> -t <TITLE> -i <INPUT> -o <OUTPUT>'
         opts.on('-f', '--format [FORMAT]', 'Use output format <FORMAT> instead of HTML') do |format|
           @options[:format] = format
+        end
+        opts.on '-t', '--title [TITLE]', 'Use title instead of "Song-Sheet"' do |title|
+          @options[:title] = title
         end
         opts.on('-i', '--input [INPUTFILE]', 'Use Filename instead of STDIN') do |file|
           @options[:input] = open file
@@ -35,9 +38,9 @@ module Akkordarbeit
       parsetree = Parser.new.parse @options[:input].gets(nil)
       output = case @options[:format]
       when /html/i
-        HtmlFormatter.new.format parsetree
+        HtmlFormatter.new.format parsetree, @options[:title]
       when /text/i
-        TextFormatter.new.format parsetree
+        TextFormatter.new.format parsetree, @options[:title]
       end
       @options[:output].puts output
     ensure

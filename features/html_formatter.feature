@@ -47,7 +47,7 @@ Feature: HTML Output
     		</header>
     		<section>
     			<p>
-    				<span class='chord'><span><span class='brackets'>[</span>D<span class='brackets'>]</span></span>Do what I say, </span><span class='chord'><span><span class='brackets'>[</span>Em<span class='brackets'>]</span></span>or I will suffer</span><br />
+    				<span class='chord'><span><span class='brackets'>[</span>D<span class='brackets'>]</span></span>Do what I say, </span><span class='chord'><span><span class='brackets'>[</span>Em<span class='brackets'>]</span></span>or I will suffer</span>
     			</p>
     		</section>
     	</body>
@@ -101,7 +101,7 @@ Feature: HTML Output
     		<section>
     			<p>
     				<span class='chord'><span><span class='brackets'>[</span>D<span class='brackets'>]</span></span>Do what I say, </span><span class='chord'><span><span class='brackets'>[</span>Em<span class='brackets'>]</span></span>or I will suffer</span><br />
-    				Do what <span class='chord'><span><span class='brackets'>[</span>D<span class='brackets'>]</span></span>I say, </span><span class='chord'><span><span class='brackets'>[</span>Em<span class='brackets'>]</span></span>or I will suffer</span><br />
+    				Do what <span class='chord'><span><span class='brackets'>[</span>D<span class='brackets'>]</span></span>I say, </span><span class='chord'><span><span class='brackets'>[</span>Em<span class='brackets'>]</span></span>or I will suffer</span>
     			</p>
     		</section>
     	</body>
@@ -159,11 +159,11 @@ Feature: HTML Output
     		<section>
     			<p>
     				<span class='chord'><span><span class='brackets'>[</span>D<span class='brackets'>]</span></span>Do what I say, </span><span class='chord'><span><span class='brackets'>[</span>Em<span class='brackets'>]</span></span>or I will suffer</span><br />
-    				Do what <span class='chord'><span><span class='brackets'>[</span>D<span class='brackets'>]</span></span>I say, </span><span class='chord'><span><span class='brackets'>[</span>Em<span class='brackets'>]</span></span>or I will suffer</span><br />
+    				Do what <span class='chord'><span><span class='brackets'>[</span>D<span class='brackets'>]</span></span>I say, </span><span class='chord'><span><span class='brackets'>[</span>Em<span class='brackets'>]</span></span>or I will suffer</span>
     			</p>
     			<p>
     				<span class='chord'><span><span class='brackets'>[</span>D<span class='brackets'>]</span></span>Do what I say, </span><span class='chord'><span><span class='brackets'>[</span>Em<span class='brackets'>]</span></span>or I will suffer</span><br />
-    				Do what <span class='chord'><span><span class='brackets'>[</span>D<span class='brackets'>]</span></span>I say, </span><span class='chord'><span><span class='brackets'>[</span>Em<span class='brackets'>]</span></span>or I will suffer</span><br />
+    				Do what <span class='chord'><span><span class='brackets'>[</span>D<span class='brackets'>]</span></span>I say, </span><span class='chord'><span><span class='brackets'>[</span>Em<span class='brackets'>]</span></span>or I will suffer</span>
     			</p>
     		</section>
     	</body>
@@ -215,7 +215,60 @@ Feature: HTML Output
     		</header>
     		<section>
     			<p>
-    				&lt;<br />
+    				&lt;
+    			</p>
+    		</section>
+    	</body>
+    </html>
+
+    """
+
+  Scenario: Title
+    Given the title Awesome Song
+    And the parsetree
+    """
+    [
+      [
+        ['Text']
+      ]
+    ]
+    """
+
+    When I format it as HTML
+    Then the output should be
+    """
+    <!DOCTYPE html>
+    <html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
+    	<head>
+    		<meta http-equiv='Content-type'     content='text/html; charset=UTF-8' />
+    		<title>Awesome Song</title>
+    		<meta http-equiv='content-language' content='en' />
+    		<style>
+    			p {
+    				line-height: 300%;
+    				max-width: 30em;
+    			}
+    			.chord {
+    				position: relative;
+    			}
+    			.chord span {
+    				position: absolute;
+    				bottom: 40%;
+    				font-size: 66%;
+    				font-weight: bold;
+    			}
+    			.chord .brackets {
+    				display: none;
+    			}
+    		</style>
+    	</head>
+    	<body>
+    		<header>
+    			<h1>Awesome Song</h1>
+    		</header>
+    		<section>
+    			<p>
+    				Text
     			</p>
     		</section>
     	</body>

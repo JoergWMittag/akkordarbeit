@@ -19,7 +19,6 @@ Feature: Text Output
     [D]            [Em]
     Do what I say, or I will suffer
 
-
     """
 
   Scenario: Text Output of a simple Song with one Section and two lines
@@ -40,7 +39,6 @@ Feature: Text Output
     Do what I say, or I will suffer
             [D]    [Em]
     Do what I say, or I will suffer
-
 
     """
 
@@ -72,5 +70,26 @@ Feature: Text Output
             [D]    [Em]
     Do what I say, or I will suffer
 
+    """
+
+  Scenario: Title
+    Given the title Awesome Song
+    And the parsetree
+    """
+    [
+      [
+        ['Text']
+      ]
+    ]
+    """
+
+    When I format it as text
+    Then the output should be
+    """
+    ==============
+     Awesome Song
+    ==============
+    
+    Text
 
     """

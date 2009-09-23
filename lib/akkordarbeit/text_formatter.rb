@@ -8,8 +8,9 @@ $LOAD_PATH.unshift libdir unless $LOAD_PATH.include? libdir
 
 module Akkordarbeit
   class TextFormatter
-    def format(parsetree)
+    def format(parsetree, title = nil)
       output = ''
+      output << '=' * (title.length + 2) << "\n" << ' ' << title << "\n" << '=' * (title.length + 2) << "\n" if title
       parsetree.each do |section|
         section.each do |line|
           chords, lyrics = '', ''
@@ -26,7 +27,7 @@ module Akkordarbeit
         end
         output << "\n"
       end
-      return output
+      return output.chomp
     end
   end
 end
