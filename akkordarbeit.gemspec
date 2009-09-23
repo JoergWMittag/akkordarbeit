@@ -75,8 +75,8 @@ or plaintext.
       s.homepage = HOMEPAGE
       s.rubyforge_project = NAME
       s.license = LICENSE
-      s.required_ruby_version = Gem::Version.new '1.8.6'
-      s.required_rubygems_version = Gem::Version.new '1.3.2'
+      s.required_ruby_version = '~> 1.8.6'
+      s.required_rubygems_version = '~> 1.3.2'
       s.has_rdoc = true
       s.rdoc_options = RDOCOPTIONS
       s.extra_rdoc_files = DOCFILES
@@ -85,11 +85,11 @@ or plaintext.
       s.executables = EXECUTABLES
       s.description = DESCRIPTION
       s.add_development_dependency 'cucumber', '~> 0.3.0'
-      s.add_development_dependency 'jscruggs-metric_fu', '~> 1.1.5', '>= 1.1.5'
-      s.add_development_dependency 'rdoc', '~> 2.4.3', '>= 2.4.2'
-      s.add_development_dependency 'reek', '~> 1.1.3', '>= 1.1.3'
-      s.add_development_dependency 'roodi', '~> 2.0.0', '>= 2.0.0'
-      s.add_development_dependency 'rspec', '~> 1.2.4', '>= 1.2.4'
+      s.add_development_dependency 'jscruggs-metric_fu', '~> 1.1.5'
+      s.add_development_dependency 'rdoc', '~> 2.4.2'
+      s.add_development_dependency 'reek', '~> 1.2.0'
+      s.add_development_dependency 'roodi', '~> 2.0.0'
+      s.add_development_dependency 'rspec', '~> 1.2.4'
     end
   end
 end unless defined? Akkordarbeit::Projectinfo::GEMSPEC
