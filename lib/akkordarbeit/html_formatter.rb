@@ -6,6 +6,8 @@
 libdir = File.expand_path(File.dirname __FILE__).gsub(/(.*lib).*?/, '\1')
 $LOAD_PATH.unshift libdir unless $LOAD_PATH.include? libdir
 
+require 'cgi'
+
 module Akkordarbeit
   class HtmlFormatter
     def format(parsetree)
@@ -52,10 +54,10 @@ module Akkordarbeit
               last_chord = $1
             else
               unless last_chord
-                output << token
+                output << escape(token)
               else
                 token = '&nbsp;' if token =~ /^\s$/
-                output << "<span class='chord'><span><span class='brackets'>[</span>#{last_chord}<span class='brackets'>]</span></span>#{token}</span>"
+                output << "<span class='chord'><span><span class='brackets'>[</span>#{escape(last_chord)}<span class='brackets'>]</span></span>#{escape(token)}</span>"
                 last_chord = nil
               end
             end
@@ -69,6 +71,12 @@ module Akkordarbeit
 	</body>
 </html>
     HERE
+    end
+
+    private
+
+    def escape(str)
+      return CGI.escapeHTML(str)
     end
   end
 end

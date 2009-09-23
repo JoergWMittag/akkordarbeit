@@ -170,3 +170,55 @@ Feature: HTML Output
     </html>
 
     """
+
+  Scenario: HTML Escaping
+    Given the parsetree
+    """
+    [
+      [
+        ['<']
+      ]
+    ]
+    """
+
+    When I format it as HTML
+    Then the output should be
+    """
+    <!DOCTYPE html>
+    <html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
+    	<head>
+    		<meta http-equiv='Content-type'     content='text/html; charset=UTF-8' />
+    		<title>Song-Sheet</title>
+    		<meta http-equiv='content-language' content='en' />
+    		<style>
+    			p {
+    				line-height: 300%;
+    				max-width: 30em;
+    			}
+    			.chord {
+    				position: relative;
+    			}
+    			.chord span {
+    				position: absolute;
+    				bottom: 40%;
+    				font-size: 66%;
+    				font-weight: bold;
+    			}
+    			.chord .brackets {
+    				display: none;
+    			}
+    		</style>
+    	</head>
+    	<body>
+    		<header>
+    			<h1>Song-Sheet</h1>
+    		</header>
+    		<section>
+    			<p>
+    				&lt;<br />
+    			</p>
+    		</section>
+    	</body>
+    </html>
+
+    """
