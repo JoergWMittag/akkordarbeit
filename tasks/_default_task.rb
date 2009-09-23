@@ -6,4 +6,4 @@
 
 require 'rake'
 
-task :default => :spec
+task :default => :features
