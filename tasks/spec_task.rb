@@ -12,5 +12,5 @@ Spec::Rake::SpecTask.new do |t|
   t.warning = true
   t.rcov = true
   t.rcov_dir = File.join 'coverage', 'spec'
-  t.spec_opts = File.readlines(File.join taskdir, '..', 'spec', 'spec.opts')
+  t.spec_opts = %W[--options "#{File.expand_path(File.join taskdir, '..', 'spec', 'spec.opts')}"]
 end
