@@ -7,7 +7,7 @@
 module Akkordarbeit
   module Projectinfo
     NAME     = 'Akkordarbeit'
-    VERSION  = '0.0.3c'
+    VERSION  = '0.0.4'
     SUMMARY  = 'Formats ChordPro leadsheets as HTML or plaintext'
     AUTHORS  = ['Jörg W Mittag', 'Marc Rummel']
     EMAIL    = 'JoergWMittag+Akkordarbeit@GoogleMail.Com'
@@ -84,12 +84,12 @@ or plaintext.
       s.test_files = TESTFILES
       s.executables = EXECUTABLES
       s.description = DESCRIPTION
-      s.add_development_dependency 'cucumber', '~> 0.4.4'
+      s.add_development_dependency 'cucumber', '~> 0.6.2'
       s.add_development_dependency 'jscruggs-metric_fu', '~> 1.1.5'
       s.add_development_dependency 'rdoc', '~> 2.4.3'
-      s.add_development_dependency 'reek', '~> 1.2.4'
-      s.add_development_dependency 'roodi', '~> 2.0.1'
-      s.add_development_dependency 'rspec', '~> 1.2.9'
+      s.add_development_dependency 'reek', '~> 1.2.6'
+      s.add_development_dependency 'roodi', '~> 2.1.0'
+      s.add_development_dependency 'rspec', '~> 1.3.0'
     end
   end
 end unless defined? Akkordarbeit::Projectinfo::GEMSPEC

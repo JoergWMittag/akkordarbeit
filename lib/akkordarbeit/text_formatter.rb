@@ -10,7 +10,7 @@ module Akkordarbeit
   class TextFormatter
     def format(parsetree, title = nil)
       output = ''
-      output << '=' * (title.length + 2) << "\n" << ' ' << title << "\n" << '=' * (title.length + 2) << "\n" if title
+      output << '=' * (title.length + 2) << "\n" ' ' << title << "\n" << '=' * (title.length + 2) << "\n" if title
       parsetree.each do |section|
         section.each do |line|
           chords, lyrics = '', ''

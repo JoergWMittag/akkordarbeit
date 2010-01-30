@@ -39,11 +39,11 @@ Given 'the parsetree' do |parsetree|
   @parsetree = eval(parsetree)
 end
 
-Given 'the title (.*)' do |title|
+Given /the title (.*)/ do |title|
   @title = title
 end
 
-When 'I format it as (.*)' do |format|
+When /I format it as (.*)/ do |format|
   @result = case format
   when /html/i
     unless @title
