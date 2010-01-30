@@ -7,7 +7,7 @@
 module Akkordarbeit
   module Projectinfo
     NAME     = 'Akkordarbeit'
-    VERSION  = '0.0.4'
+    VERSION  = '0.0.5'
     SUMMARY  = 'Formats ChordPro leadsheets as HTML or plaintext'
     AUTHORS  = ['Jörg W Mittag', 'Marc Rummel']
     EMAIL    = 'JoergWMittag+Akkordarbeit@GoogleMail.Com'
@@ -75,7 +75,7 @@ or plaintext.
       s.homepage = HOMEPAGE
       s.rubyforge_project = NAME
       s.license = LICENSE
-      s.required_ruby_version = '~> 1.8.6'
+      s.required_ruby_version = '> 1.8.6'
       s.required_rubygems_version = '~> 1.3.5'
       s.has_rdoc = true
       s.rdoc_options = RDOCOPTIONS
