@@ -73,28 +73,27 @@ or plaintext.
       s.authors = AUTHORS
       s.email = EMAIL
       s.homepage = HOMEPAGE
-      s.rubyforge_project = NAME
       s.license = LICENSE
-      s.required_ruby_version = '> 1.8.6'
-      s.required_rubygems_version = '~> 1.3.5'
-      s.has_rdoc = true
+      s.required_ruby_version = '~> 1.9.2'
+      s.required_rubygems_version = '~> 1.3.7'
+      s.has_rdoc = 'yard'
       s.rdoc_options = RDOCOPTIONS
       s.extra_rdoc_files = DOCFILES
       s.files = FILELIST
       s.test_files = TESTFILES
       s.executables = EXECUTABLES
       s.description = DESCRIPTION
-      s.add_development_dependency 'cucumber', '~> 0.6.2'
-      s.add_development_dependency 'jscruggs-metric_fu', '~> 1.1.5'
-      s.add_development_dependency 'rdoc', '~> 2.4.3'
-      s.add_development_dependency 'reek', '~> 1.2.6'
+      s.add_development_dependency 'cucumber', '~> 0.7.3'
+      s.add_development_dependency 'metric_fu', '~> 1.3.0'
+      s.add_development_dependency 'reek', '~> 1.2.8'
       s.add_development_dependency 'roodi', '~> 2.1.0'
-      s.add_development_dependency 'rspec', '~> 1.3.0'
+      s.add_development_dependency 'rspec', '~> 2.0.0'
+      s.add_development_dependency 'yard', '~> 0.5.4'
     end
   end
 end unless defined? Akkordarbeit::Projectinfo::GEMSPEC
 
 if __FILE__ == $0
-  Gem::manage_gems
+  Gem.manage_gems
   Gem::Builder.new(Akkordarbeit::Projectinfo::GEMSPEC).build
 end
