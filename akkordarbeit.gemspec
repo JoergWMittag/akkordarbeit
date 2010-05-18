@@ -75,7 +75,7 @@ or plaintext.
       s.homepage = HOMEPAGE
       s.license = LICENSE
       s.required_ruby_version = '~> 1.9.2'
-      s.required_rubygems_version = '~> 1.3.7'
+      s.required_rubygems_version = '~> 1.4.0'
       s.has_rdoc = 'yard'
       s.rdoc_options = RDOCOPTIONS
       s.extra_rdoc_files = DOCFILES
@@ -83,12 +83,10 @@ or plaintext.
       s.test_files = TESTFILES
       s.executables = EXECUTABLES
       s.description = DESCRIPTION
-      s.add_development_dependency 'cucumber', '~> 0.7.3'
-      s.add_development_dependency 'metric_fu', '~> 1.3.0'
-      s.add_development_dependency 'reek', '~> 1.2.8'
-      s.add_development_dependency 'roodi', '~> 2.1.0'
-      s.add_development_dependency 'rspec', '~> 2.0.0'
-      s.add_development_dependency 'yard', '~> 0.5.4'
+      s.add_development_dependency 'cucumber', '~> 0.10.0'
+      s.add_development_dependency 'metric_fu', '~> 2.0.1'
+      s.add_development_dependency 'rspec', '~> 2.3.1'
+      s.add_development_dependency 'yard', '~> 0.6.4'
     end
   end
 end unless defined? Akkordarbeit::Projectinfo::GEMSPEC
