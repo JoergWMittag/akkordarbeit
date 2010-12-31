@@ -34,9 +34,8 @@ or plaintext.
       akkordarbeit_spec.rb
       akkordarbeit_suite.rb
       spec_helper.rb
-      spec.opts
     ]
-    SPECFILES = SPECS.map { |f| File.join SPECDIR, f }
+    SPECFILES = SPECS.map { |f| File.join SPECDIR, f } << '.rspec'
 
     TESTFILES = FEATUREFILES + SPECFILES
 

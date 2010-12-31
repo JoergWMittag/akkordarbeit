@@ -5,7 +5,7 @@
 # This code is licensed under the terms of the MIT License (see LICENSE.rdoc)
 
 require 'cucumber'
-require 'spec/expectations'
+require 'rspec/expectations'
 
 stepsdir = File.expand_path(File.dirname __FILE__).gsub(/(.*step_definitions).*?/, '\1')
 featuredir = File.expand_path File.join(stepsdir, '..')
