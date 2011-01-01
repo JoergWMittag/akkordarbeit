@@ -1,0 +1,8 @@
+--title Akkordarbeit
+--readme README.rdoc
+--charset UTF-8
+
+lib/**/*.rb
+bin/**/*.rb
+-
+**/*.rdoc
